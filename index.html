@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+        .css-table {
+            font-size:16px;
+        }
+
+        .css-table th, td, tbody {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="html">
+            <h3>HTML (Hypertext Markup Language)</h3>
+            <p>Код, который используется для структурирования и отображения веб-страницы и её контента. Например,
+                контент может быть структурирован внутри множества параграфов, маркированных списков или с
+                использованием изображений и таблиц данных.</p>
+            <p>Не язык программирование – язык разметки</p>
+        </section>
+
+        <section class="tag">
+            <p>HTML элемент</p>
+            <img src="./img/htmlElement.png" alt="element">
+        </section>
+
+        <section class="attributes">
+            <p>Атрибуты</p>
+            <img src="./img/attributes.png" alt="attributes">
+            <ol>
+                <li class="fragment" data-fragment-index="1">
+                    Пробел между ним и именем элемента (или предыдущим атрибутом, если элемент уже имеет один или
+                    несколько атрибутов).
+                </li>
+                <li class="fragment" data-fragment-index="2">
+                    Имя атрибута, за которым следует знак равенства.
+                </li>
+                <li class="fragment" data-fragment-index="3">
+                    Значение атрибута, заключённое с двух сторон в кавычки.
+                </li>
+            </ol>
+        </section>
+
+        <section class="nested-elements">
+            <div>
+                <p>Вложенные элементы</p>
+                <pre><code data-line-numbers>
+&lt;ol class="elements"&gt;
+    &lt;li class="element"&gt;
+        &lt;span class="element__text"&gt;Вложенный элемент 1&lt;/span&gt;
+     &lt;/li&gt;
+    &lt;li class="element"&gt;
+        &lt;span class="element__text"&gt;Вложенный элемент 2&lt;/span&gt;
+     &lt;/li&gt;
+    &lt;li class="element"&gt;
+        &lt;span; class="element__text"&gt;Вложенный элемент 3&lt;/span&gt;
+     &lt;/li&gt;
+&lt;/ol&gt;
+                    </code></pre>
+            </div>
+            <div class="fragment" data-fragment-index="2">
+                <p>Пустые элементы</p>
+                <pre><code>
+&lt;img src="./img.png" alt="изобрежанеие" /&gt;
+                    </code></pre>
+            </div>
+
+        </section>
+
+        <section class="html-layout">
+            <p>Анатомия HTML документа</p>
+            <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;
+                    </code></pre>
+            <ul>
+                <li style="font-size: 20px">&lt;!DOCTYPE html&gt; - это декларация типа документа. Так браузер узнает,
+                    на каком языке и с какими технологиями он был создан. Если не укажете DOCTYPE, то ваша страница
+                    может отображаться некорректно.
+                </li>
+                <li style="font-size: 20px">&lt;html&gt;&lt;/html&gt; — этот элемент оборачивает весь контент на всей
+                    странице, и иногда известен как корневой элемент.
+                </li>
+                <li style="font-size: 20px">&lt;head&gt;&lt;/head&gt; — этот элемент выступает в качестве контейнера для
+                    всего, что вы пожелаете включить на HTML страницу, но не являющегося контентом, который вы
+                    показываете пользователям вашей страницы.
+                </li>
+                <li style="font-size: 20px">&lt;body&gt;&lt;/body&gt; — в нем содержится весь контент, который вы хотите
+                    показывать пользователям
+                </li>
+                <li style="font-size: 20px">&lt;meta charset="utf-8"&gt; — этот элемент устанавливает UTF-8 кодировку
+                    вашего документа, которая включает в себя большинство символов из всех известных человечеству
+                    языков.
+                </li>
+                <li style="font-size: 20px">&lt;title&gt;&lt;/title&gt;- этот элемент устанавливает заголовок для вашей
+                    страницы
+                </li>
+            </ul>
+        </section>
+
+        <section class="tags-example">
+            <section>Разметка текста</section>
+            <section>
+                <p>Заголовки</p>
+                <pre><code>
+                    &lt;h1&gt;Заголовок 1-го уровня&lt;/h1&gt;
+                    &lt;h2&gt;Заголовок 2-го уровня&lt;/h2&gt;
+                    &lt;h3&gt;Заголовок 3-го уровня&lt;/h3&gt;
+                    &lt;h4&gt;Заголовок 4-го уровня&lt;/h4&gt;
+                    &lt;h5&gt;Заголовок 5-го уровня&lt;/h5&gt;
+                    &lt;h6&gt;Заголовок 6-го уровня&lt;/h6&gt;
+                </code></pre>
+                <img src="./img/h.png" alt="h">
+            </section>
+
+            <section>
+                <p style="font-size: 30px">Абзацы</p>
+                <pre><code><p>текст</p></code></pre>
+<div class="fragment" data-fragment-index="1">
+    <span  style="font-size: 30px">Нумерованные списки</span>
+    <pre><code data-trim>
+<ul>
+    <li>Элемент ненумерованного списка</li>
+    <li>Элемент ненумерованного списка</li>
+</ul>
+                </code></pre>
+</div>
+                <div class="fragment" data-fragment-index="2">
+                    <span  style="font-size: 30px">Ненумерованные списки</span>
+                    <pre><code data-trim>
+<ol>
+    <li>Элемент нумерованного списка</li>
+    <li>Элемент нумерованного списка</li>
+</ol>
+                </code></pre>
+                </div>
+            <div class="fragment" data-fragment-index="3">
+                <p  style="font-size: 30px">Ссылки</p>
+                <pre><code data-trim>
+<a href="https://www.google.com">Манифест Mozilla</a>
+                </code></pre>
+            </div>
+            </section>
+        </section>
+
+        <section class="css">
+            <h3>CSS</h3>
+            <p>Не является языком программирования</p>
+            <p>Это язык таблицы стилей</p>
+        </section>
+
+        <section class="css-rules">
+            <h3>Анатомия набора правил CSS</h3>
+            <img width="600" height="250" src="./img/css-rules.png" alt="css-rules">
+            <ul class="fragment" data-fragment-index="1">
+                <li  class="fragment" data-fragment-index="1" style="font-size: 20px">
+                    Селектор (Selector) -
+                    имя HTML-элемента в начале набора правил. Он выбирает элемент(ы) для применения стиля.
+                </li>
+                <li  class="fragment" data-fragment-index="2" style="font-size: 20px">
+                    Объявление (Declaration) -
+                    указывает, какие из свойств элемента вы хотите стилизовать.
+                </li>
+                <li  class="fragment" data-fragment-index="3"  style="font-size: 20px">
+                    Свойства (Properties) -
+                    способы, которыми вы можете стилизовать определённый HTML-элемент.
+                </li>
+                <li  class="fragment" data-fragment-index="4"  style="font-size: 20px">
+                    Значение свойства (Property value) -
+                    справа от свойства, после двоеточия, у нас есть значение свойства, которое выбирает одно из множества возможных признаков для данного свойства.
+                </li>
+            </ul>
+            <ul>
+                <li  class="fragment" data-fragment-index="5" style="font-size: 20px">
+                    Каждый набор правил (кроме селектора) должен быть обёрнут в фигурные скобки ({})
+                </li>
+                <li  class="fragment" data-fragment-index="6" style="font-size: 20px">
+                    В каждом объявлении необходимо использовать двоеточие (:), чтобы отделить свойство от его значений
+                </li>
+                <li  class="fragment" data-fragment-index="7" style="font-size: 20px">
+                    В каждом наборе правил вы должны использовать точку с запятой (;), чтобы отделить каждое объявление от следующего.
+                </li>
+            </ul>
+        </section>
+
+        <section class="css-selectors-type">
+            <p>Разные типы селекторов</p>
+            <table class="css-table">
+                <thead>
+                <tr>
+                    <th>Имя селектора</th>
+                    <th>Что выбирает</th>
+                    <th>Пример</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Селектор элемента (иногда называемый селектором тега или типа)</td>
+                    <td>Все HTML-элемент(ы) указанного типа.</td>
+                    <td><code>p</code> Выбирает <code>&lt;p&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>ID селектор</td>
+                    <td>Элемент на странице с указанным ID на данной HTML. Лучше всего использовать один элемент для каждого ID (и конечно один ID для каждого элемента), даже если вам разрешено использовать один и тот же ID для нескольких элементов.</td>
+                    <td><code>#my-id</code> Выбирает <code>&lt;p id="my-id"&gt;</code> или <code>&lt;a id="my-id"&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>Селектор класса</td>
+                    <td>Элемент(ы) на странице с указанным классом (множество экземпляров класса может объявляться на странице).</td>
+                    <td><code>.my-class</code> Выбирает <code>&lt;p class="my-class"&gt;</code> и <code>&lt;a class="my-class"&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>Селектор атрибута</td>
+                    <td>Элемент(ы) на странице с указанным атрибутом.</td>
+                    <td><code>img[src]</code> Выбирает <code>&lt;img src="myimage.png"&gt;</code> но не <code>&lt;img&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>Селектор псевдокласса</td>
+                    <td>Указанные элемент(ы), но только в случае определённого состояния, например, при наведении курсора.</td>
+                    <td><code>a:hover</code> Выбирает <code>&lt;a&gt;</code>, но только тогда, когда указатель мыши наведён на ссылку.</td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    })
+</script>
+</body>
+</html>
